@@ -53,6 +53,8 @@
     <modules>
         <module>basic-example</module>
         <module>jwt-example</module>
+        <module>oauth-example</module>
+        <module>oidc-example</module>
     </modules>
     
     <properties>

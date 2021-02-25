@@ -19,7 +19,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
  * The company endpoint
  * @author Phillip Kruger (phillip.kruger@redhat.com)
  */
-@Path("/jax-rs")
+@Path("/api")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Tag(name = "Company information", description = "Information on the company")

@@ -9,9 +9,9 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import org.eclipse.microprofile.auth.LoginConfig;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.enums.SecuritySchemeType;
+import org.eclipse.microprofile.openapi.annotations.enums.SecuritySchemeIn;
 import org.eclipse.microprofile.openapi.annotations.security.SecurityRequirement;
 import org.eclipse.microprofile.openapi.annotations.security.SecurityScheme;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
@@ -24,12 +24,13 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Tag(name = "Company information", description = "Information on the company")
-@SecurityScheme(securitySchemeName = "Company Authentication",
-        description = "Your JWT token", 
-        type = SecuritySchemeType.HTTP, 
-        scheme = "bearer", 
-        bearerFormat = "JWT")
-@LoginConfig(authMethod = "MP-JWT")
+//@SecurityScheme(securitySchemeName = "Company Authentication",
+//        description = "Your JWT token",
+//        in = SecuritySchemeIn.HEADER, 
+//        type = SecuritySchemeType.HTTP, 
+//        scheme = "Bearer", 
+//        bearerFormat = "JWT")
+
 public class CompanyEndpoint {
     
     @GET
