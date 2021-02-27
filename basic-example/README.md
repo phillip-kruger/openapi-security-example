@@ -1,0 +1,2 @@
+# OpenAPI Security : Basic
+
