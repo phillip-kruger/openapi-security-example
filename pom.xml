@@ -55,6 +55,7 @@
         <module>jwt-example</module>
         <module>oauth-example</module>
         <module>oidc-example</module>
+        <module>swagger-ui-example</module>
     </modules>
     
     <properties>
