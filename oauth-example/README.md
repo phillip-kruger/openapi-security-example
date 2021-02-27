@@ -8,7 +8,7 @@ Download keycloak 12.0.2 and start with:
 ```
 
 * Import `oauth-keycloak-setup.json`
-** This creates the relevant client (microprofile-jwt-client) and groups and roles.
+** This creates the relevant client (quarkus-oauth2-client) and groups and roles.
 * Create some users
 ** Under Manage>Users>Add user
 *** dilbert:dilbert and join the employeeGroup

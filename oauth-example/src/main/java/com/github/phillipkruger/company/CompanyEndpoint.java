@@ -11,7 +11,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.enums.SecuritySchemeType;
-import org.eclipse.microprofile.openapi.annotations.enums.SecuritySchemeIn;
+import org.eclipse.microprofile.openapi.annotations.security.OAuthFlow;
+import org.eclipse.microprofile.openapi.annotations.security.OAuthFlows;
 import org.eclipse.microprofile.openapi.annotations.security.SecurityRequirement;
 import org.eclipse.microprofile.openapi.annotations.security.SecurityScheme;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
@@ -24,12 +25,14 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Tag(name = "Company information", description = "Information on the company")
-//@SecurityScheme(securitySchemeName = "Company Authentication",
-//        description = "Your JWT token",
-//        in = SecuritySchemeIn.HEADER, 
-//        type = SecuritySchemeType.HTTP, 
-//        scheme = "Bearer", 
-//        bearerFormat = "JWT")
+@SecurityScheme(securitySchemeName = "Company Authentication",
+        description = "OAuth",
+        type = SecuritySchemeType.OAUTH2, 
+        flows = @OAuthFlows(
+        implicit = @OAuthFlow(
+            refreshUrl = "http://localhost:8081/auth/realms/OpenAPIOAuth2/protocol/openid-connect/token",
+            authorizationUrl = "http://localhost:8081/auth/realms/OpenAPIOAuth2/protocol/openid-connect/auth",
+            scopes = {})))
 
 public class CompanyEndpoint {
     
@@ -46,7 +49,7 @@ public class CompanyEndpoint {
     @Path("/employees")
     @Operation(summary = "Internal information", description = "List of employees, only available to other employees")
     @RolesAllowed("employee")
-    @SecurityRequirement(name = "Company Authentication")
+    @SecurityRequirement(name = "Company Authentication", scopes = {})
     public List<String> employees(){
         return List.of("Dilbert", "Wally", "Alice", "Dogbert", "Catbert", "Asok", "Ted", "PHB");
     }
@@ -55,7 +58,7 @@ public class CompanyEndpoint {
     @Path("/employees/remuneration")
     @Operation(summary = "Sensitive information", description = "Remuneration of employees, only available to the boss")
     @RolesAllowed("boss")
-    @SecurityRequirement(name = "Company Authentication")
+    @SecurityRequirement(name = "Company Authentication", scopes = {})
     public Map<String,Double> remuneration(){
         return Map.of("Dilbert",100.00, "Wally", 110.00, "Alice", 120.00, "Dogbert", 150.00, "Catbert", 250.00, "Asok", 50.00, "Ted", 95.00, "PHB", 300.00);
     }

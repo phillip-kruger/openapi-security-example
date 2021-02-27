@@ -17,5 +17,5 @@ Download keycloak 12.0.2 and start with:
 ## In Swagger UI
 
 * flow = password
-* client id = quarkus-oidc-client&
-* client secret = 0ae76fa1-4062-4c84-91c8-a4d635dea618
+* client id = quarkus-oidc-client
+* client secret = 7e311ef3-f251-40d2-959b-8e79fd448d91

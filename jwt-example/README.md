@@ -1,7 +1,7 @@
 # OpenAPI Security : JWT
 
 ## Keycloak 
-Download keycloak 12.0.2 and start with:
+Download keycloak 12.0.3 and start with:
 
 ```
 ./bin/standalone.sh -Djboss.http.port=8081
