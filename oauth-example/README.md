@@ -19,3 +19,5 @@ Download keycloak 12.0.3 and start with:
 * flow = implicit
 * client id = quarkus-oauth2-client
 * client secret = 1374b313-0f72-472d-a252-f50e4db816aa
+
+![Screenshot](screenshot_oauth2.gif)

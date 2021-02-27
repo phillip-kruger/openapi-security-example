@@ -21,3 +21,5 @@ curl -d "realm=OpenAPIJWT&grant_type=password&client_id=microprofile-jwt-client&
 
 ### Boss (boss)
 curl -d "realm=OpenAPIJWT&grant_type=password&client_id=microprofile-jwt-client&username=boss&password=boss" -X POST http://localhost:8081/auth/realms/OpenAPIJWT/protocol/openid-connect/token | json_pp
+
+![Screenshot](screenshot_jwt.gif)
