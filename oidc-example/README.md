@@ -8,11 +8,11 @@ Download keycloak 12.0.3 and start with:
 ```
 
 * Import `oidc-keycloak-setup.json`
-** This creates the relevant client (quarkus-oidc-client) and groups and roles.
+    * This creates the relevant client (quarkus-oidc-client) and groups and roles.
 * Create some users
-** Under Manage>Users>Add user
-*** dilbert:dilbert and join the employeeGroup
-*** boss:boss and join the employeeGroup and the bossGroup
+    * Under Manage>Users>Add user
+        * dilbert:dilbert and join the employeeGroup
+        * boss:boss and join the employeeGroup and the bossGroup
 
 ## In Swagger UI
 
