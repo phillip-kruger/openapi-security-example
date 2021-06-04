@@ -28,7 +28,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
         description = "Your JWT token", 
         type = SecuritySchemeType.HTTP, 
         scheme = "bearer", 
-        bearerFormat = "JWT")
+        bearerFormat = "JWT")       
 @LoginConfig(authMethod = "MP-JWT")
 public class CompanyEndpoint {
     
