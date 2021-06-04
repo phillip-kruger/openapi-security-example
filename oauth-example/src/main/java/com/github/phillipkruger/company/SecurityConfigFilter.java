@@ -38,7 +38,6 @@ public class SecurityConfigFilter implements OASFilter {
         OAuthFlow oAuthFlow = OASFactory.createOAuthFlow();
         oAuthFlow.authorizationUrl(authorizationUrl);
         oAuthFlow.refreshUrl(refreshUrl);
-        oAuthFlow.setScopes(OASFactory.createScopes());
         oAuthFlows.setImplicit(oAuthFlow);
         securityScheme.setType(SecurityScheme.Type.OAUTH2);
         securityScheme.setFlows(oAuthFlows);
