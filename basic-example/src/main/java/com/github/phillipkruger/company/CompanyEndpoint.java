@@ -25,7 +25,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 @Tag(name = "Company information", description = "Information on the company")
 @SecurityScheme(securitySchemeName = "Company Authentication",
         description = "Basic Authentication",
-        type = SecuritySchemeType.HTTP, 
+        type = SecuritySchemeType.HTTP,
         scheme = "basic")
 public class CompanyEndpoint {
     
@@ -41,7 +41,7 @@ public class CompanyEndpoint {
     @GET
     @Path("/employees")
     @Operation(summary = "Internal information", description = "List of employees, only available to other employees")
-    @RolesAllowed("employee")
+    @RolesAllowed("employee")    
     @SecurityRequirement(name = "Company Authentication")
     public List<String> employees(){
         return List.of("Dilbert", "Wally", "Alice", "Dogbert", "Catbert", "Asok", "Ted", "PHB");
