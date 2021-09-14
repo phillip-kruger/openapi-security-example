@@ -43,6 +43,5 @@ public class CompanyEndpoint {
     @RolesAllowed("boss")
     public Map<String,Double> remuneration(){
         return Map.of("Dilbert",100.00, "Wally", 110.00, "Alice", 120.00, "Dogbert", 150.00, "Catbert", 250.00, "Asok", 50.00, "Ted", 95.00, "PHB", 300.00);
-    }
-    
+    }   
 }
