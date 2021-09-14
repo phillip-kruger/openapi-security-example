@@ -18,6 +18,6 @@ Download keycloak 12.0.3 and start with:
 
 * flow = password
 * client id = quarkus-oidc-client
-* client secret = e7f3d8f6-a02c-4559-9837-13e3d215c3cf
+* client secret = 883adc2a-0d3d-4014-8d94-577ca25f7791
 
 ![Screenshot](screenshot_oidc.gif)

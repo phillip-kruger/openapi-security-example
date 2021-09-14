@@ -51,11 +51,14 @@
     </developers>
     
     <modules>
-        <module>basic-example</module>
+        <module>basic-properties-example</module>
+        <module>basic-jdbc-example</module>
+        <module>basic-jpa-example</module>
         <module>jwt-example</module>
         <module>oauth-example</module>
         <module>oidc-example</module>
         <module>swagger-ui-example</module>
+        <module>form-properties-example</module>
     </modules>
     
     <properties>
@@ -65,10 +68,10 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus-plugin.version>2.0.0.Final</quarkus-plugin.version>
+        <quarkus-plugin.version>999-SNAPSHOT</quarkus-plugin.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-        <quarkus.platform.version>2.0.0.Final</quarkus.platform.version>
+        <quarkus.platform.version>999-SNAPSHOT</quarkus.platform.version>
         <surefire.version>3.0.0-M5</surefire.version>
         
         <keycloak.version>12.0.3</keycloak.version>
